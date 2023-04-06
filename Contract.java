@@ -4,7 +4,7 @@ public interface Contract {
     String drop(String item);
     void examine(String item);
     void use(String item);
-    boolean walk(String direction);
+    boolean walk(String direction); 
     boolean fly(int x, int y);
     Number shrink();
     Number grow();
