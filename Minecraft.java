@@ -21,7 +21,7 @@ public class Minecraft implements Contract {
         }
 
     /**
-     * acessors of character
+     * acessors of character and potion for later use
      * @return character
      * @return potion
      */
