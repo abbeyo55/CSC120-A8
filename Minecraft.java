@@ -40,7 +40,7 @@ public class Minecraft implements Contract {
         if(character.equals("Alex") || character.equals("Steve")){
             System.out.println("Welcome " + character + "!!");
         } else{
-            System.out.println("Please Pick a new character for the game: either Steve or Alex");
+            System.out.println("Please pick a new character for the game: either Steve or Alex");
         }
     }
 
@@ -205,7 +205,9 @@ public class Minecraft implements Contract {
         Alex.grow();
         Alex.rest();
         Alex.undo();
-    }
 
+        Minecraft Rob = new Minecraft(4, "Rob");
+        Rob.player("Rob");
+    }
     
 }
