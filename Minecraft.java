@@ -37,11 +37,13 @@ public class Minecraft implements Contract {
    *  @param name name of the character you selected
    */
     public void player(String name){
-        if (this.character == "Alex")
-            System.out.println("Alex is ready to play!");
-     if (this.character == "Steve")
-         System.out.println("Steve is ready to play!");
-     }
+        if(character.equals("Alex") || character.equals("Steve")){
+            System.out.println("Welcome " + character + "!!");
+        } else{
+            System.out.println("Please Pick a new character for the game: either Steve or Alex");
+        }
+    }
+
 
     /** 
      * character is able to grab tools for thier own use
@@ -99,11 +101,11 @@ public class Minecraft implements Contract {
    * @return T/F whether or not the character can walk
    */
     public boolean walk(String direction){
-        if(direction.equals("forward") || direction.equals("backward")){
+        if(direction.equals("forward") || direction.equals("backward")|| direction.equals("left")|| direction.equals("right")){
             System.out.println("You are now walking " + direction);
             return true;
         } else{
-            System.out.println("I don't understand this direction: " + direction + ". Try: forward or backward");
+            System.out.println("I don't understand this direction: " + direction + ". Try: forward,backward, left or right");
             return false;
         }
     }
