@@ -90,9 +90,9 @@ public class Minecraft implements Contract {
         }
         if (this.potion == 6){
             System.out.println("You have " + potion + " potions, you can now attack! You have " + item + " left in your backpack.");
-        }//else{
-            //System.out.println("You need to select either 2, 4 or 6 potions to be able use use a feature."); //this isn't necessary
-        //}
+        }else{
+            System.out.println("You need to select either 2, 4 or 6 potions to be able use use a feature."); //this isn't necessary
+        }
     }
 
     /** 
@@ -208,6 +208,10 @@ public class Minecraft implements Contract {
 
         Minecraft Rob = new Minecraft(4, "Rob");
         Rob.player("Rob");
+        
+        Minecraft Steve2 = new Minecraft(7, "Steve");
+        Steve2.player("Steve");
+        Steve2.use("30");
     }
     
 }
