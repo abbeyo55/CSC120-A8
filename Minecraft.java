@@ -40,7 +40,7 @@ public class Minecraft implements Contract {
         if(character.equals("Alex") || character.equals("Steve")){
             System.out.println("Welcome " + character + "!!");
         } else{
-            System.out.println("Please pick a new character for the game: either Steve or Alex");
+            System.out.println("Please pick a different character for the game: either Steve or Alex");
         }
     }
 
@@ -71,11 +71,18 @@ public class Minecraft implements Contract {
    */
     public void examine(String item) {
      if (item.equals("skeleton")){
-            System.out.println("A " + item + " is in front of you. Before you proceed, examine the obstacle.");
-     }else{
+            System.out.println("A " + item + " is in front of you. Before you proceed, ensure you examine the enemy to make your next move.");
+     } if (item.equals("zombie")){
+        System.out.println("A " + item + " is in front of you. Before you proceed, ensure you examine the enemy to make your next move.");
+     } if (item.equals("creeper")){
+        System.out.println("A " + item + " is in front of you. Before you proceed, ensure you examine the enemy to make your next move.");
+    } if (item.equals("spider")){
+        System.out.println("A " + item + " is in front of you. Before you proceed, ensure you examine the enemy to make your next move.");
+    } else{
          System.out.println("Keep going foward but beware of enemies.");
      }
     }
+
 
     /** 
    *  What the character can do if they have enough potion
@@ -91,7 +98,7 @@ public class Minecraft implements Contract {
         if (this.potion == 6){
             System.out.println("You have chosen to use " + potion + " potions, you can now attack! You have " + item + " left in your backpack.");
         }else{
-            System.out.println("You need to select either 2, 4 or 6 potions to be able to upgrade your characters abilities."); //this isn't necessary
+            System.out.println("You need to select either 2, 4 or 6 potions to be able to upgrade your characters abilities. You currently have " + item + " potions for use."); //this isn't necessary
         }
     }
 
@@ -105,7 +112,7 @@ public class Minecraft implements Contract {
             System.out.println("You are now walking " + direction);
             return true;
         } else{
-            System.out.println("I don't understand this direction: " + direction + ". Try: forward,backward, left or right");
+            System.out.println("I don't understand this direction: " + direction + ". Try: forward, backward, left or right");
             return false;
         }
     }
@@ -151,7 +158,7 @@ public class Minecraft implements Contract {
      * */
     public void rest() {
         if(this.heartPoints == 0){
-            System.out.println("Character is dead due to now hearts. Now resting");
+            System.out.println("Character is dead due to no hearts lives left. Character now resting");
         }else{
             System.out.println("Character still able to move around.");
         }
@@ -192,7 +199,7 @@ public class Minecraft implements Contract {
         Alex.grab("candle");
         Alex.grab("bat");
         Alex.drop("bat");
-        Alex.examine("squid");
+        Alex.examine("ghost");
         Alex.use("10");
         Alex.walk("backward");
         Alex.walk("forward");
