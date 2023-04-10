@@ -83,15 +83,15 @@ public class Minecraft implements Contract {
    */
     public void use(String item) {
         if (this.potion == 2){
-           System.out.println("You have " + potion + " potions, you can now sprint! You have " + item + " left in your backpack.");
+           System.out.println("You have chosen to use " + potion + " potions, you can now sprint! You have " + item + " left in your backpack.");
         }
         if (this.potion == 4){
-            System.out.println("You have " + potion + " potions, you can now sneak! You have " + item + " left in your backpack.");
+            System.out.println("You have chosen to use " + potion + " potions, you can now sneak! You have " + item + " left in your backpack.");
         }
         if (this.potion == 6){
-            System.out.println("You have " + potion + " potions, you can now attack! You have " + item + " left in your backpack.");
+            System.out.println("You have chosen to use " + potion + " potions, you can now attack! You have " + item + " left in your backpack.");
         }else{
-            System.out.println("You need to select either 2, 4 or 6 potions to be able use use a feature."); //this isn't necessary
+            System.out.println("You need to select either 2, 4 or 6 potions to be able to upgrade your characters abilities."); //this isn't necessary
         }
     }
 
@@ -167,7 +167,7 @@ public class Minecraft implements Contract {
     }
 
     public static void main(String[] args) {
-        Minecraft Steve = new Minecraft(6, "Steve");
+        Minecraft Steve = new Minecraft(3, "Steve");
         Steve.player("Steve");
         Steve.grab("bow and arrow");
         Steve.grab("boxing gloves");
